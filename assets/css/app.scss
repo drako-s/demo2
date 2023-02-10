@@ -1,0 +1,331 @@
+$light : #fff;
+$lighter : #f5f5f5;
+$border : rgb(170, 170, 170);
+$text : #444;
+$secondary: #EB7B11;
+$secondary-light: #ff7700;
+$primary: #F858A9;
+$gradient : linear-gradient(to right, #F858A9, #EB7B11); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    overflow: hidden;
+}
+
+header {
+    padding-bottom: 50px;
+}
+header nav {
+    background-color: $light;
+    
+}
+
+header nav .navbar-brand {
+    color: $primary;
+}
+
+header .nav-link {
+    position: relative;
+}
+button.navbar-toggler, button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+header .nav-link.active::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: $secondary;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+    transform: translateY(-50%);
+}
+section {
+    padding-top: 120px;   
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    z-index: 3;
+}
+
+h2::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: $secondary;
+    z-index: -1;
+}
+
+.subheadline {
+    font-style: italic;
+}
+
+.zindex-3 {
+    z-index: 3;
+}
+
+@media screen and (min-width:1080px){
+    
+    .hero .hero__btn {
+        font-size: 26px;
+        min-width: 250px;
+        min-height: 60px;
+        border-radius: 50px;
+    }
+}
+
+.hero__btn {
+    border-radius: 25px;
+    min-width: 150px;
+    background: $lighter;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text;
+    border-color: $lighter;
+}
+
+.hero__btn:hover {
+    background: $text;
+    border-color: $text;
+    box-shadow: 2px 2px 15px $text;
+}
+
+.navbar-toggler:focus, .navbar-toggler {
+    
+    box-shadow: none;
+}
+
+.navbar-social-icons i {
+    border: 1px solid $primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: $primary;
+    font-size: 12px;
+}
+
+.shape-fill {
+    fill: $gradient;
+    background: $gradient;
+}
+.hero {
+    background: $gradient;  
+}
+
+.hero h1, .hero p {
+    color: $lighter;
+}
+
+.hero h1 {
+    font-weight: 700;
+    font-size: 70px;
+}
+
+.hero .subheadline {
+    font-size: 22px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.hero .subheadline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: $lighter;
+}
+
+
+@media screen and (max-width:999px){
+    .hero h1 {
+        font-size: 40px;
+    }    
+    h2 {
+        font-size: 30px;
+    }
+    .hero .subheadline {
+        font-size: 18px;
+    }
+}
+
+.hero-shape {
+    position: relative;
+}
+
+.custom-shape {
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    height: 150px;
+    width: 100vw;
+    z-index: 2;
+}
+
+#product {
+    background-color: $lighter;    
+}
+
+#product .features-icon {
+    font-size: 40px;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $secondary;
+    background-color: $secondary;
+    color: $lighter;
+    box-shadow: 2px 2px 10px $border;
+}
+
+#product .features-icon:hover {
+    box-shadow: none;
+    filter: blur(5px);
+}
+
+#product h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#cta {
+    background: $gradient;
+}
+
+#cta h2::after {
+    display: none;
+}
+#pricing, #faq {
+    padding-top: 120px;
+}
+
+#pricing .price-card {
+    position: relative;
+    border: 2px solid $primary;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 2px 2px 10px $border;
+    transition: .3s ease-in-out;
+}
+#pricing .price-card p {
+    padding: 1rem;
+}
+
+#pricing .price-card:hover {
+    box-shadow: none;
+}
+
+#pricing .price-card .pricing-icon {
+    position: absolute;
+    top: -39px;
+    left: 50%;
+    font-size: 40px;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid $primary;
+    background-color: $light;
+    color: $lighter;
+    transform: translateX(-50%);
+    transition: .3s ease-in-out;
+}
+
+
+#pricing .price-card .price {
+    color: $lighter;
+    font-weight: 500;
+    font-size: 24px;
+    background-color: $primary;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+}
+
+#pricing .price-card:hover .price {
+    background-color: $text;
+}
+
+#faq .accordion .accordion-button.collapsed  {
+    box-shadow: none;
+    outline: none;
+}
+
+
+#faq .accordion h2::after {
+    display: none;
+}
+
+#faq .accordion .accordion-button:not(.collapsed) {
+    background-color: $secondary;
+    box-shadow: none;
+    color: $lighter;
+}
+
+#faq .accordion .accordion-button:not(.collapsed)::after {
+    fill: $secondary;
+}
+
+#contact-us {
+    background: linear-gradient(45deg, $text 60%, $secondary 40%);
+    color: $lighter;
+}
+
+#contact-us a {
+    color: $secondary;
+}
+#contact-us a:hover {
+    color:$primary;
+}
+
+#contact-us .open-hour {
+    border-left: 5px solid $secondary;
+    border-top: 1px solid $secondary;
+    backdrop-filter: blur(15px);
+    border-top-left-radius: 50px;
+}
+
+#contact-us .open-hour .headline-color {
+    font-weight: 600;
+}
+
+#contact-us .footer {
+    background-color: #222;
+
+}
